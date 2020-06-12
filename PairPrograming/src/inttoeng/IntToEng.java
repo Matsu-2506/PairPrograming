@@ -38,17 +38,42 @@ public class IntToEng {
 		return no;
 	}
 	
+    public String print2 (int a) {
+		String no = "";
+		switch (a/10) {
+			case 0: break;
+			case 2: no = "twenty"; break;
+			case 3: no = "thirty"; break;
+			case 4: no = "forty"; break;
+			case 5: no = "fifty"; break;
+			case 6: no = "sixty"; break;
+			case 7: no = "seventy"; break;
+			case 8: no = "eighty"; break;
+			case 9: no = "ninety"; break;
+		}
+		return no;
+	}
+    
+    
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
+    	
+    	
         IntToEng ite = new IntToEng();
         if(0<input && input<10) {
         	System.out.print(ite.printTeen(input));
+        } else if (input >=10 && input <20) {
+        	System.out.println(ite.printTeen(input));
+        } else if(input >= 20 ) {
+        	System.out.println(ite.print2(input) + ite.print1(input%10));
         }
+        	
         //System.out.println(translateEng(input));
     }
 
+    
     
     static String translateEng(int n) {
     	

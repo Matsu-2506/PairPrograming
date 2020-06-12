@@ -44,5 +44,12 @@ public class IntToEngTest {
 		String actual = ite.print100th(134);
 		assertThat(actual, is(expect));
 	}	
+	@Test
+	public void test1124toEng() {
+		IntToEng ite = new IntToEng();
+		String expect = "one thousand one hundred twenty four";
+		String actual = ite.print1000th(1124);
+		assertThat(actual, is(expect));
+	}
 
 }

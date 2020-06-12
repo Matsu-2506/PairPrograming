@@ -62,38 +62,43 @@ public class IntToEng {
     public String print100th(int a) {
     	IntToEng it = new IntToEng();
     	String s;
-    	s=it.print1(a/100)+" hundred "+it.print10th(a);
+    	s=it.print1(a/100) + " hundred " + it.print10th(a%100);
     	return s;
     }
-    
+    public String print1000th(int a) {
+    	IntToEng it = new IntToEng();
+    	String s;
+    	s = it.print1(a/1000) + " thousand " + it.print100th(a%1000);
+    	return s;
+    }
     
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
     	
+        if(input < 0) {
+        	System.out.println("正の数しか受け付けません");
+        }
     	
         IntToEng ite = new IntToEng();
         if(0<input && input<10) {
         	System.out.print(ite.printTeen(input));
         } else if (input >=10 && input <20) {
         	System.out.println(ite.printTeen(input));
-        } else if(input >= 20 && input<100 ) {
+        } else if (input >= 20 && input<100 ) {
         	System.out.println(ite.print10th(input));
-        }else if(100<=input && input<1000) {
+        } else if (100<=input && input<1000) {
         	System.out.println(ite.print100th(input));
+        } else if (input>=1000 && input<10000) {
+        	System.out.println(ite.print1000th(input));
+        } else {
+        	System.out.println("数が大きすぎます");
         }
-        	
+        
         //System.out.println(translateEng(input));
     }
 
-    
-    
-    static String translateEng(int n) {
-    	
-    	
-        return "";
-    }
     
 }		
 

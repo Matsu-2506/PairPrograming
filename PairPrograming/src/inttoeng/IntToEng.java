@@ -1,3 +1,5 @@
+package inttoeng;
+
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
@@ -32,7 +34,7 @@ public class IntToEng {
     	    " twelve",
     	    " thirteen",
     	    " fourteen",
-    	    " fifteen",Ï
+    	    " fifteen",
     	    " sixteen",
     	    " seventeen",
     	    " eighteen",

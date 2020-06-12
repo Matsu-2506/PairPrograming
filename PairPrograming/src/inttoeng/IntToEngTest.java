@@ -33,8 +33,15 @@ public class IntToEngTest {
 	@Test
 	public void test25toEng() {
 		IntToEng ite = new IntToEng();
-		String expect = "twenty";
-		String actual = ite.print2(25);
+		String expect = "twenty five";
+		String actual = ite.print10th(25);
+		assertThat(actual, is(expect));
+	}	
+	@Test
+	public void test134toEng() {
+		IntToEng ite = new IntToEng();
+		String expect = "one hundred thirty four";
+		String actual = ite.print100th(134);
 		assertThat(actual, is(expect));
 	}	
 
